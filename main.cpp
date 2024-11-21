@@ -1,18 +1,13 @@
 #include "std_lib_inc.h"
 
-double durchschnittBerechnen (vector <double> eingabe)
+double summeBerechnen(vector<double> eingabe)
 {
-    // if (eingabe.empty())
-    //  {
-    //  return 0.0;
-    //  }
-
     double summe = 0.0;
-    for (double abstand : eingabe)
+    for (double wert : eingabe)
     {
-        summe += abstand;
+        summe += wert;
     }
-    return summe / eingabe.size();
+    return summe;
 }
 
 int main()
@@ -28,7 +23,7 @@ int main()
     }
 
     // durchschnittliche Entfernung berechnen
-    double durchschnittsabstand = durchschnittBerechnen(abstaende);
-    cout << "Der Durchschnittsabstand ist " << durchschnittsabstand << '\n';
+    double summeAbstaende = summeBerechnen(abstaende);
+    cout << "Der Gesamtabstand ist " << summeAbstaende << '\n';
     return 0;
 }
